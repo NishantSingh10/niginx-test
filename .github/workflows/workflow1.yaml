@@ -13,5 +13,5 @@ jobs:
     
     - name: install niginx
       run: |
-        apt-get intall nginx -y
+        apt-get install nginx -y
         apt-get update
