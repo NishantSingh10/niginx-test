@@ -1,0 +1,17 @@
+name: web server deployment
+on:
+  push:
+     branches: main
+  workflow_dispatch:
+  
+ jobs:
+  end-to-end:
+    runs-on: ubuntu-20.04
+    steps:
+    - name: checkout the repo
+      uses: actions/checkout@v3
+    
+    - name: install niginx
+      run: |
+        apt-get intall nginx -y
+        apt-get update
